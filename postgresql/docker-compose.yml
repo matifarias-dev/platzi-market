@@ -1,0 +1,15 @@
+version: '3'
+services:
+  db:
+    image: postgres:14.18
+    ports:
+      - "5430:5432"
+    environment:
+      POSTGRES_PASSWORD: admin
+      POSTGRES_USER: admin
+      POSTGRES_DB: platzi-market
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+
+volumes:
+  postgres-data:
